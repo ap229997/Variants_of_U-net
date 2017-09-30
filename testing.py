@@ -264,33 +264,6 @@ for start in tqdm(range(0, len(ids_test), batch_size)):
         # rles.append(rle)
 
 
-# In[ ]:
-
-
-
-
-# In[31]:
-
-'''
-ind = 1
-# generating trimaps
-for pred in preds:
-    prob = cv2.resize(pred, (orig_width, orig_height))
-    
-    prob[prob >= (threshold+del_threshold)] = 1
-    prob[prob <= (threshold-del_threshold)] = 0
-    aa = prob < (threshold+del_threshold)
-    bb = prob > (threshold-del_threshold)
-    prob[aa&bb] = 0.5
-    
-    cv2.imwrite('/home/ap229997/carvana/dataset/trimap/trimap'+str(ind)+'.jpg', prob)
-                                                                  
-    ind += 1
-'''
-
-
-# In[44]:
-
 '''
 rles = []
 for i in range(0,len(ids_test)):
