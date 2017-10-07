@@ -19,7 +19,7 @@ string input = "test/";
 string trimap = "trimap/";
 string output = "output/";
 string ext = ".jpg";
-string path = "/home/ap229997/carvana/dataset/"; // specify path accordingly
+string path = "./dataset/"; // specify path accordingly
 
 int main()
 {

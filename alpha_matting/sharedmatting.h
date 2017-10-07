@@ -7,8 +7,6 @@
 #include <cmath>
 #include <vector>
 #include <string>
-//#include <cv.h>
-//#include <highgui.h>
 
 using namespace std;
 
@@ -38,7 +36,7 @@ struct Ftuple
     double   confidence;
 };
 
-/*程序中认定cv::Point中 x为行，y为列，可能错误，但对程序结果没有影响*/
+
 class SharedMatting
 {
 public:
@@ -76,9 +74,7 @@ public:
 
 
 private:
-//    IplImage * pImg;
-//    IplImage * trimap;
-//    IplImage * matte;
+
     cv::Mat pImg;
     cv::Mat trimap;
     cv::Mat matte;
@@ -91,7 +87,7 @@ private:
     int width;
     int kI;
     int kG;
-    int ** unknownIndex;//Unknown的索引信息；
+    int ** unknownIndex;
     int ** tri;
     int ** alpha;
     double kC;

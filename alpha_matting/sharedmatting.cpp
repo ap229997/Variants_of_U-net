@@ -3,7 +3,6 @@
 
 using namespace cv;
 
-//构造函数
 SharedMatting::SharedMatting()
 {
     kI = 10;
@@ -13,7 +12,7 @@ SharedMatting::SharedMatting()
     tuples.clear();
 
 }
-//析构函数
+
 SharedMatting::~SharedMatting()
 {
 //    cvReleaseImage(&pImg);
@@ -38,7 +37,6 @@ SharedMatting::~SharedMatting()
 }
 
 
-//载入图像
 // void SharedMatting::loadImage(char * filename)
 void SharedMatting::loadImage(string filename)
 {
@@ -71,7 +69,7 @@ void SharedMatting::loadImage(string filename)
 //    matte = cvCreateImage(cvSize(width, height), IPL_DEPTH_8U, 1);
     matte.create(Size(width, height), CV_8UC1);
 }
-//载入第三方图像
+
 // void SharedMatting::loadTrimap(char * filename)
 void SharedMatting::loadTrimap(string filename)
 {
@@ -1037,7 +1035,7 @@ void SharedMatting::localSmooth()
     }
     ftuples.clear();
 }
-//存储图像
+
 // void SharedMatting::save(char * filename)
 void SharedMatting::save(string filename)
 {
@@ -1060,7 +1058,7 @@ void SharedMatting::getMatte()
         }
     }
 }
-//主干方法
+
 void SharedMatting::solveAlpha()
 {
     clock_t start, finish;
